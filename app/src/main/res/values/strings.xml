@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MiniProject-StepCounter</string>
+    <string name="header">Running App</string>
+    <string name="header2">Run Results</string>
+    <string name="steps">Steps</string>
+    <string name="time">Time</string>
+    <string name="start_btn">Start</string>
+    <string name="stop_btn">Stop</string>
+    <string name="reset_btn">Reset</string>
+    <string name="show_btn">Show Run</string>
+    <string name="return_btn">Return</string>
+    <string name="date">Run Date:</string>
+    <string name="measure1">Metres Ran:</string>
+    <string name="measure2">Calories Burnt:</string>
+    <string name="measure3">Time Taken:</string>
+</resources>
