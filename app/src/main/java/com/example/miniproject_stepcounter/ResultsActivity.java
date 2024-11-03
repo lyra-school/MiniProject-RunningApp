@@ -10,6 +10,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 public class ResultsActivity extends AppCompatActivity {
     // references to used widgets
     TextView dateTv;
@@ -39,10 +42,14 @@ public class ResultsActivity extends AppCompatActivity {
 
         int stepsMeasured = getIntent().getIntExtra("steps", 0);
 
+        // formatting settings for display
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setRoundingMode(RoundingMode.FLOOR);
+
         // calculate and/or set information in the relevant textview
         dateTv.setText(getIntent().getStringExtra("runDate"));
-        metresTv.setText(String.valueOf((double)stepsMeasured * 0.8) + " m");
-        caloriesTv.setText(String.valueOf((double)stepsMeasured * 0.04) + " kcal");
+        metresTv.setText(df.format((double)stepsMeasured * 0.8) + " m");
+        caloriesTv.setText(df.format((double)stepsMeasured * 0.04) + " kcal");
         timeTv.setText(getIntent().getStringExtra("formattedTime"));
     }
 
