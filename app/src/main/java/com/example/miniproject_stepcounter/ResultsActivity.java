@@ -12,6 +12,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 
 public class ResultsActivity extends AppCompatActivity {
     // references to used widgets
@@ -43,7 +45,7 @@ public class ResultsActivity extends AppCompatActivity {
         int stepsMeasured = getIntent().getIntExtra("steps", 0);
 
         // formatting settings for display
-        DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormat df = new DecimalFormat("#.##", new DecimalFormatSymbols(Locale.ENGLISH));
         df.setRoundingMode(RoundingMode.FLOOR);
 
         // calculate and/or set information in the relevant textview
